@@ -5,6 +5,7 @@
   "repository": "git@github.com:wanderlima/wrun.git",
   "author": "wanderlima <wander@wanderlima.com>",
   "license": "MIT",
+  "type": "module",
   "bin": {
     "wrun": "./bin/wrun.js"
   },
