@@ -1,13 +1,40 @@
 {
-  "name": "wrun",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:wanderlima/wrun.git",
-  "author": "wanderlima <wander@wanderlima.com>",
+  "name": "wrun-cli",
+  "version": "0.1.0",
+  "description": "Interactive CLI for common git workflows with menu-driven shortcuts",
+  "keywords": [
+    "cli",
+    "git",
+    "workflow",
+    "interactive",
+    "github",
+    "developer-tools",
+    "productivity",
+    "git-shortcuts",
+    "terminal"
+  ],
+  "homepage": "https://github.com/wanderlima/wrun#readme",
+  "bugs": {
+    "url": "https://github.com/wanderlima/wrun/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanderlima/wrun.git"
+  },
   "license": "MIT",
+  "author": "wanderlima <wander@wanderlima.com>",
   "type": "module",
   "bin": {
     "wrun": "./bin/wrun.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "chalk": "^5.5.0",

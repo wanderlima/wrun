@@ -24,8 +24,20 @@ An interactive CLI that provides menu-driven shortcuts for common git workflows.
 ## Installation
 
 ```bash
+npm install -g wrun-cli
+```
+
+Or use with npx without installing:
+
+```bash
+npx wrun-cli
+```
+
+### Development Installation
+
+```bash
 npm install
-npm link  # Makes wrun available globally
+npm link  # Makes wrun available globally for local testing
 ```
 
 ## Usage
