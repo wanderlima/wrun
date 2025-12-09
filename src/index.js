@@ -13,6 +13,10 @@ let command = args[1];
 
 const categories = {
   git: [
+    {
+      name: "set-upstream - push and set upstream branch",
+      value: "set-upstream",
+    },
     { name: "pr - create pull request", value: "pr" },
     { name: "reset - soft reset last commit", value: "reset" },
     { name: "amend - edit last commit message", value: "amend" },
@@ -85,6 +89,33 @@ if (!command || !categories[category].some((c) => c.value === command)) {
 switch (category) {
   case "git":
     switch (command) {
+      case "set-upstream":
+        const { stdout: currentBranch } = await execa("git", [
+          "rev-parse",
+          "--abbrev-ref",
+          "HEAD",
+        ]);
+
+        const { remoteName, branchName } = await inquirer.prompt([
+          {
+            type: "input",
+            name: "remoteName",
+            message: "Remote name:",
+            default: "origin",
+          },
+          {
+            type: "input",
+            name: "branchName",
+            message: "Branch name:",
+            default: currentBranch,
+          },
+        ]);
+
+        await execa("git", ["push", "--set-upstream", remoteName, branchName], {
+          stdio: "inherit",
+        });
+        break;
+
       case "pr":
         await execa("gh", ["pr", "create", "--fill", "--web"], {
           stdio: "inherit",
