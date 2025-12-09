@@ -1,6 +1,6 @@
 {
   "name": "wrun-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Interactive CLI for common git workflows with menu-driven shortcuts",
   "keywords": [
     "cli",
@@ -25,7 +25,8 @@
   "author": "wanderlima <wander@wanderlima.com>",
   "type": "module",
   "bin": {
-    "wrun": "./bin/wrun.js"
+    "wrun": "./bin/wrun.js",
+    "wrun-cli": "./bin/wrun.js"
   },
   "files": [
     "bin/",
